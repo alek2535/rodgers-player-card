@@ -1,0 +1,22 @@
+.container {
+    margin: 15px 25px 15px 25px;
+    padding-right: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    align-content: space-between;
+    background-color: white;
+    text-align: center;
+  }
+
+.main-image {
+    max-width: 100%;
+    height: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .container{
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,61 @@
+#stats-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 15px 25px 15px 25px;
+    padding: 0 15px 20px 15px;
+    background-color: white;
+    overflow: scroll;
+}
+
+#seasons-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 15px 25px 15px 25px;
+    background-color: white;
+}
+
+#change-season-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* align-items: center; */
+    align-content: space-between;
+    text-align: center;
+    margin: 15px 25px 15px 25px;
+    background-color: white;
+}
+.header {
+    border-bottom: 2px solid black;
+}
+
+.table-data {
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+#year-select {
+    border-radius: 10px;
+    text-align: center;
+    margin-left: 10px;
+}
+
+table {
+    border-spacing: 5px;
+    border: 1px solid black;
+  }
+
+  thead th {
+    border-bottom: 1px solid black;
+  }
+
+  tfoot td {
+    border-top: 1px solid black;
+  }
+
+  @media screen and (max-width: 768px) {
+    #seasons-container{
+      flex-direction: column;
+    }
+  }

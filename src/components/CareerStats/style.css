@@ -1,0 +1,19 @@
+#highlight-year {
+    background-color: lightgrey;
+}
+
+#career-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 15px 25px 15px 25px;
+    padding: 0 15px 20px 15px;
+    background-color: white;
+    overflow: scroll;
+}
+
+#total-row {
+    border-top: 2px solid black;
+    text-align: center;
+    background-color: #ddd;
+}
