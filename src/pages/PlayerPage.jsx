@@ -83,6 +83,7 @@ const PlayerPage = () => {
             n + (parseInt(QBSackYardage) || 0), 0);
         let qbrForYear = statsForYear.reduce((n, { QBRating }) =>
             n + (parseInt(QBRating) || 0), 0);
+        let actualQBR = (qbrForYear / gamesPlayedForYear.length).toFixed(1);
         let rAttpsForYear = statsForYear.reduce((n, { RusAttempts }) =>
             n + (parseInt(RusAttempts) || 0), 0);
         let rYardsForYear = statsForYear.reduce((n, { RusYards }) =>
@@ -110,7 +111,7 @@ const PlayerPage = () => {
         seasonYears[year.season].ints = intsForYear;
         seasonYears[year.season].sacks = scksForYear;
         seasonYears[year.season].sckYards = sckYardsForYear;
-        seasonYears[year.season].qbr = qbrForYear;
+        seasonYears[year.season].qbr = actualQBR;
         seasonYears[year.season].rAttempts = rAttpsForYear;
         seasonYears[year.season].rYards = rYardsForYear;
         seasonYears[year.season].rTds = rTdsForYear;

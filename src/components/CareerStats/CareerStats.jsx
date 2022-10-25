@@ -13,7 +13,8 @@ const CareerStats = ({ statsYear, seasonYears }) => {
     let totalInts = Object.values(seasonYears).reduce((n, { ints }) => n + ints, 0);
     let totalSacks = Object.values(seasonYears).reduce((n, { sacks }) => n + sacks, 0);
     let totalSckYards = Object.values(seasonYears).reduce((n, { sckYards }) => n + sckYards, 0);
-    let totalQbr = Object.values(seasonYears).reduce((n, { qbr }) => n + qbr, 0);
+    let totalQbr = Object.values(seasonYears).reduce((n, { qbr }) => n + parseInt(qbr), 0);
+    let totalActQBR = (totalQbr / Object.values(seasonYears).length).toFixed(1);
     let totalrAttempts = Object.values(seasonYears).reduce((n, { rAttempts }) => n + rAttempts, 0);
     let totalrYards = Object.values(seasonYears).reduce((n, { rYards }) => n + rYards, 0);
     let totalrTds = Object.values(seasonYears).reduce((n, { rTds }) => n + rTds, 0);
@@ -87,7 +88,7 @@ const CareerStats = ({ statsYear, seasonYears }) => {
                         <td key={`ints-total`}>{totalInts}</td>
                         <td key={`scks-total`}>{totalSacks}</td>
                         <td key={`sckYs-total`}>{totalSckYards}</td>
-                        <td key={`qbr-total`}>{totalQbr}</td>
+                        <td key={`qbr-total`}>{totalActQBR}</td>
                         <td key={`rAttempts-total`}>{totalrAttempts}</td>
                         <td key={`rYards-total`}>{totalrYards}</td>
                         <td key={`rTDs-total`}>{totalrTds}</td>
