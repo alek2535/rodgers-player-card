@@ -1,10 +1,10 @@
 import React from "react";
 import "./style.css";
-import header from "../../assets/Header-Packers-Game-scaled.jpeg";
+import header from "../../assets/1280px-Green_Bay_Packers_logo.svg.png";
 
 const Header = () => {
     return (
-        <header className="header-container">
+        <header id="header-container">
             <img className="header-logo" src={header} />
         </header>
     )
